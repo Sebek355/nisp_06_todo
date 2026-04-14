@@ -86,3 +86,52 @@ h1 {
   background: #f3f4f6;
   transform: translateY(-1px);
 }
+
+#task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Checkbox */
+#task-list input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Tekst zadania */
+#task-list span {
+  flex: 1;
+}
+
+/* Styl ukończonego zadania */
+.done {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Animacja usuwania */
+#task-list li {
+  transition: all 0.3s ease;
+}
+
+#task-list li.removing {
+  opacity: 0;
+  transform: translateX(30px);
+}
